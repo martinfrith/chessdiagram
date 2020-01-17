@@ -1,0 +1,33 @@
+{
+  "name": "chessdiagram",
+  "description": "Javascript chess widget",
+  "version": "0.9.1",
+  "author": "Martin Frith",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/martinfrith/chesswidget.git"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --open",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js --env.prod",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "babel-loader": "^8.0.0-beta.0",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.1",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
+    "mustache": "^3.1.0"
+  }
+}

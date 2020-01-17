@@ -1,0 +1,300 @@
+<html>
+<head>
+    <title>Chess Diagram Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">  
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="twitter:card" value="summary">
+    <meta property="og:title" content="Chess diagram" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chessdiagram.herokuapp.com" />
+    <meta property="og:image" content="https://chessdiagram.herokuapp.com/share.png" />
+    <meta property="og:description" content="Show your chess like a boss" /> 
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="/css/site.css" rel="stylesheet" media="all" />
+    <link href="/css/pretty.css" rel="stylesheet" media="all" />
+</head>
+<body>
+    <div class="header">
+        <div class="container centered">
+            <h2 class="centered">Chess Diagram</h2>
+            <h5 class="centered">Show your chess like a boss</h5>
+            <ul class="topnav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/usage.html">Usage</a></li>
+                <li><a href="/themes.html">Themes</a></li>
+                <li><a href="/credits.html">Credits</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Usage</h2>
+        <h3>1. Load the Widget</h3>
+        <p>Place this block this inside your header or after your body tag.</p>
+        <pre class="prettyprint">&lt;script&gt;
+    (function (w,d,s,o,f,js,fjs) {
+        w['YouChess-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+    }(window, document, 'script', 'cw', '//chessdiagram.herokuapp.com/widget.js'));
+&lt;/script&gt;</pre>
+
+        <h3>2. Set your preferences</h3>
+        <p>This block is optional. If not specified values will fallback to defaults.</p>
+        <pre class="prettyprint">&lt;script&gt;
+    cw('init', { 
+        interval: 750,
+        speed: 150,
+        pieces: 'uscf',
+        whitesquare:'#f0d9b5',
+        blacksquare:'#b58863',    
+        lang: 'es',
+        autoplay: true
+    });
+&lt;/script&gt;</pre>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Datatype</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>interval</td>
+                    <td class="centered"><em>Integer</em></td>
+                    <td class="centered">1000</td>
+                    <td>
+                        <p>Time between moves. In milliseconds.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>speed</td>
+                    <td class="centered"><em>Integer</em></td>
+                    <td class="centered">200</td>
+                    <td>
+                        <p>Piece animation speed. In milliseconds.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>pieces</td>
+                    <td class="centered"><em>String</em></td>
+                    <td class="centered">'classic'</td>
+                    <td>
+                        <p>Pieces theme. Available pieces styles are 'classic', 'chess24', 'neo', 'neon', 'uscf', 'wood', 'book', 'leipzig', 'cases' and 'modern'.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>whitesquare</td>
+                    <td class="centered"><em>String</em></td>
+                    <td class="centered">'#f0d9b5'</td>
+                    <td>
+                        <p>Custom light squares background color.</p>
+                    </td>
+                </tr>                
+                <tr>
+                    <td>blacksquare</td>
+                    <td class="centered"><em>String</em></td>
+                    <td class="centered">'#b58863'</td>
+                    <td>
+                        <p>Custom dark squares background color.</p>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>lang</td>
+                    <td class="centered"><em>String</em></td>
+                    <td class="centered">'en'</td>
+                    <td>
+                        <p>Language to describe the diagram. Available languages are en and es.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>autoplay</td>
+                    <td class="centered"><em>Boolean</em></td>
+                    <td class="centered">false</td>
+                    <td>
+                        <p>The widget will start automatically after being loaded if set to <em>true</em>.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot> 
+                <tr>
+                    <td colspan=4 class="right">
+                        <em>Configuration table</em>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>3. Load your chess diagrams</h3>
+        <p>You can load your game using HTML. You can override init settings here.</p>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-site="Herceg Novi MNE" 
+    diagram-event="Herceg Novi blitz" 
+    diagram-round="4" 
+    diagram-white="Samuel Reshevsky" 
+    diagram-black="Robert James Fischer" 
+    diagram-date="1970.04.08" 
+    diagram-result="1/2-1/2" 
+    diagram-orientation="black" 
+    diagram-pgn="1. d4 {Notes by Robert Fischer} Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 O-O 5. Be2 d6 6. Nf3 e5 7. Be3 {!? Reshevsky likes this flexible system.} c6 {7...Qe7 is the sharpest here. A game Gligoric-Fischer, Monaco 1967 continued 8 d5 Ne8 9 h4 f5 10 h5 f4 11Bd2 g5 12h6 Bf6, etc.} 8. O-O Ng4 9. Bg5 f6 {or 9...Qb6 10 h3! exd4? 11 Na4!} 10. Bc1 f5 11. h3 exd4 12. Nxd4 Ne5 13. exf5 gxf5 14. f4 Qb6 {!?} 15. Be3 {! or 15 Kh1 Nf7 equalizes, (not 15...Nxc4?? Bc4+ or 15...Ng4?? 16 Nxf5 Nf2+ 17 Rxf2 Qxf2 18 Be3} Ng6 {? After this move Black is busted. More enterprising was 15...Qxb2! 16 Na4 Qa3 17 Bc1 Qg3 18 fxe5 Bxe5 19 Rf3 Qh2+ 20 Kf2 Nd7 with play.} 16. Nxf5 Qxb2 17. Nxg7 Qxc3 18. Bd4 Qa5 19. Bg4 {Simple but effective, 19 c5 was snappier though.} Na6 20. Bxc8 Raxc8 21. Qg4 {! White's threats are proliferating chiefly 22 Qe6+, but other less brutal moves like 22 Ne6 or Nh5 or 22 f5 were not pretty tp contemplate. Also the fact that Reshevsky had a good 3.5 to 4 minutes to polish me off was not to pleasing. I decided here to opt for the endgame.} Rc7 22. Ne6 {22 f5 was more aggresive keeping the Queens.} Qf5 {!} 23. Nxf8 {Of course more aggressive was 23 Qxf5 Rxf5 24 g4.} Qxg4 24. hxg4 Nxf8 25. f5 {25 Bxa7 was easier, ie 25...b5 26 Bb6 Rb7 27 cxb5 Rxb6 28 bxa6 Rxa6 29 a4 Ra5 30 Rc1 c5 31 Rb1 etc.} c5 26. Bc3 Rd7 27. Rad1 Nc7 28. Rfe1 Kf7 29. Re3 b5 30. Red3 {Ba5!} bxc4 31. Rxd6 Rxd6 32. Rxd6 Nb5 33. Rf6+ Ke7 34. Rc6 {?? As Reshevsky pointed out immediately after the game 34 Ba1! c3 Rc6! Nd7 36 Re6+ Kf7 37 Re1 won.} Nxc3 35. Rxc5 Nxa2 36. Rxc4 Nd7 37. Ra4 Nc3 38. Rxa7 Ne4 39. Kh2 Kd6 40. Kh3 Ndf6 41. Kh4 h6 {!} 42. Rg7 Ke5 43. Rg6 Kf4 44. g3+ Kf3 45. Rxh6 Nxg4 46. Rg6 Nxg3 47. Rxg4 {And here Reshevsky proposed a draw and I accepted.}"&gt;&lt;/div&gt;</pre>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Datatype</th>
+                    <th>Sample</th>
+                    <th>Description</th>
+                    <th>Required</th>
+                </tr>
+                <tr>
+                    <td>white</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'Byrne, Robert E'</td>
+                    <td>
+                        <p>Player with white pieces.</p>
+                    </td>
+                    <td class="centered">✔️</td>
+                </tr>
+                <tr>
+                    <td>black</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'Fischer, Robert James'</td>
+                    <td>
+                        <p>Player with black pieces.</p>
+                    </td>
+                    <td class="centered">✔️</td>
+                </tr>
+                <tr>
+                    <td>pgn</td>
+                    <td class="centered"><em>String</em></td>
+                    <td>'1. d4 Nf6 2. c4 g6 3. g3 ...'</td>
+                    <td>
+                        <p>The moves of the diagram expressed in PGN format.</p>
+                    </td>
+                    <td class="centered">✔️</td>
+                </tr>
+                <tr>
+                    <td>container</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'.my-div-container'</td>
+                    <td>
+                        <p>A new div will be attached to body tag if not specified</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>orientation</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'white' or 'black'</td>
+                    <td>
+                        <p>Board orientation</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>event</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'2014 World championship', 'Your Next Move Blitz' ...</td>
+                    <td>
+                        <p>Name of the diagram event</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>site</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'New York', 'Berlin', 'Stockholm' ...</td>
+                    <td>
+                        <p>Site of the event</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'1952.11.31', '2014.06.15' ...</td>
+                    <td>
+                        <p>Date of the diagram event. Accepted format is <em>YYYY.MM.DD</em></p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>round</td>
+                    <td class="centered"><em>String</em></td>                    
+                    <td>'1', '2°', '3' ...</em></td>
+                    <td>
+                        <p>Round of the diagram event.</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>whiteelo</td>
+                    <td class="centered"><em>Integer</em></td>
+                    <td>2620</td>
+                    <td>
+                        <p>White pieces player's ELO.</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>blackelo</td>
+                    <td class="centered"><em>Integer</em></td>
+                    <td>2780</td>
+                    <td>
+                        <p>Black pieces player's ELO.</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+                <tr>
+                    <td>result</td>
+                    <td class="centered"><em>String</em></td>
+                    <td>'1-0', '0-1' or '1/2-1/2'</td>
+                    <td>
+                        <p>Result of the diagram.</p>
+                    </td>
+                    <td class="centered"></td>
+                </tr>
+            </tbody>
+            <tfoot> 
+                <tr>
+                    <td colspan=5 class="right">
+                        <em>diagram data table</em>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>ECO</h3>
+        <p>Chess Diagram will automatically detect and add the Encyclopedia Chess Opening (ECO) for your game.</p>
+
+        <h3>Annotations</h3>
+        <p>Following PGN standards annotations are grouped inside <strong>curly braces</strong>.</p>
+        <pre class="prettyprint">1.e4 e5 2.Nf3 Nc6 3.Bb5 {This will be your annotation.} Nf6 4.d3 ...</pre>
+
+        <h3>Theming</h3>
+        <p>See an theming examples with <a href="/themes.html">multiple boards</a>.</p>
+    </div> 
+</body>
+</html>

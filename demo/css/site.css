@@ -1,0 +1,109 @@
+body {
+    font-family: 'Rubik', monospace;
+    background-color: #f1f1f1;
+    color:#333;
+    font-size: 16px;
+    margin: 0;
+}
+
+body > .container {
+    padding-bottom: 0;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 1.75rem;
+}
+
+th, td {
+    border: 1px solid #f8f8f8;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.header {
+    background-color: white;
+    color: #333;
+    padding: 1rem;
+}
+
+.header h2, .header h5 {
+    margin: 0;
+}
+
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.topnav {
+    padding: 0;
+    margin: 0 -1.5rem;
+    margin-top: 1.75rem;
+    display: inline-block;
+    list-style: none;
+    clear: both;
+}
+
+.topnav li {
+    float: left;
+}
+
+.topnav li a {
+    color: #3282b8;
+    border-bottom: 3px solid transparent;
+}
+
+.topnav li:hover a {
+    border-color: #3282b8;
+}
+
+.topnav li.active a {
+    color:#0f4c75;
+    border-color: #0f4c75;
+}
+
+.topnav li a {
+    text-decoration: none;
+    padding: 1rem 0.75rem;
+}
+
+.board-container {
+    margin-top: 0!important;
+    background-color: white;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    table, pre {
+        display: inherit;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding-bottom: 0;
+    }
+    .container {
+        padding-bottom: 1rem;
+    }
+}

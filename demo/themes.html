@@ -1,0 +1,180 @@
+<html>
+<head>
+    <title>Chess Diagram Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">  
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="twitter:card" value="summary">
+    <meta property="og:title" content="Chess diagram" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://chessdiagram.herokuapp.com" />
+    <meta property="og:image" content="https://chessdiagram.herokuapp.com/share.png" />
+    <meta property="og:description" content="Show your chess like a boss" /> 
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="/css/site.css" rel="stylesheet" media="all" />
+    <link href="/css/pretty.css" rel="stylesheet" media="all" />
+    <script>
+        (function (w,d,s,o,f,js,fjs) {
+            w['YouChess-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'cw', './widget.js'));
+    </script>
+    <script>
+        cw('init', { 
+            interval: 750,
+            speed: 150,
+            autoplay: false
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="container centered">
+            <h2 class="centered">Chess Diagram</h2>
+            <h5 class="centered">Show your chess like a boss</h5>
+            <ul class="topnav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/usage.html">Usage</a></li>
+                <li class="active"><a href="/themes.html">Themes</a></li>
+                <li><a href="/credits.html">Credits</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Themes</h2>
+        <h3>Classic</h3>
+        <div class="board-container" diagram-pieces="classic" diagram-whitesquare="#f0d9b5" diagram-blacksquare="#b58863" diagram-site="Havana CUB" diagram-round="12" diagram-event="World Championship Match" diagram-white="Emanuel Lasker" diagram-black="Jose Raul Capablanca" diagram-pgn="1.e4 {Notes by J. R. Capablanca.} e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O d6 5.d4 Bd7 6.Nc3 Be7 7.Re1 exd4 8.Nxd4 O-O 9.Bf1 Re8 10.f3 Bf8 11.Bg5 h6 12.Bh4 g6 13.Nd5 Bg7 {I cannot very highly recommend the system of defense adopted by me in this variation.} 14.Nb5 {The combinations beginning with this move are all wrong. White's proper move was simply to hold the position by playing c3. After the text move, Black should get the better game.} g5 15.Ndxc7 {If 15.Bf2, Nxd5 would give Black the better game. The combination indulged in by White is good only in appearence.} gxh4 16.Nxa8 Qxa8 17.Nc7 Qd8 18.Nxe8 Nxe8 19.Rb1 Be6 20.c3 Bxa2 {A mistake. Black had here a won game by playing Be5. The question of time at this point was not properly appreciated by Black, who went in to recover a Pawn, which was of no impotance whatever. Worse yet, the capture of the Pawn only helped White.} 21.Ra1 Be6 22.Qd2 a6 {h3 was better. After the text move Black has an extremely difficult game to play.} 23.Qf2 h5 {Qg5 would have given Black better chances to win. After the text move there is nothing better than a draw.} 24.f4 Bh6 25.Be2 Nf6 26.Qxh4 Nxe4 27.Qxd8+ Nxd8 28.Bxa6 d5 29.Be2 Bxf4 30.Bxh5 Bc7 31.Rad1 {Having had twenty-four hours to consider the position, we both came to the conclusion that there was nothing in it but a draw.}" diagram-date="1921.04.16" diagram-result="1/2-1/2"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-pieces="classic" 
+    diagram-whitesquare="#f0d9b5" 
+    diagram-blacksquare="#b58863"
+    diagram-site="Havana CUBA" 
+    diagram-round="12" 
+    diagram-event="World Championship Match" 
+    diagram-white="Emanuel Lasker" 
+    diagram-black="Jose Raul Capablanca" 
+    diagram-pgn="1.e4 {Notes by J. R. Capablanca.} e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O d6 5.d4 Bd7 6.Nc3 Be7 7.Re1 exd4 8.Nxd4 O-O 9.Bf1 Re8 10.f3 Bf8 11.Bg5 h6 12.Bh4 g6 13.Nd5 Bg7 {I cannot very highly recommend the system of defense adopted by me in this variation.} 14.Nb5 {The combinations beginning with this move are all wrong. White's proper move was simply to hold the position by playing c3. After the text move, Black should get the better game.} g5 15.Ndxc7 {If 15.Bf2, Nxd5 would give Black the better game. The combination indulged in by White is good only in appearence.} gxh4 16.Nxa8 Qxa8 17.Nc7 Qd8 18.Nxe8 Nxe8 19.Rb1 Be6 20.c3 Bxa2 {A mistake. Black had here a won game by playing Be5. The question of time at this point was not properly appreciated by Black, who went in to recover a Pawn, which was of no impotance whatever. Worse yet, the capture of the Pawn only helped White.} 21.Ra1 Be6 22.Qd2 a6 {h3 was better. After the text move Black has an extremely difficult game to play.} 23.Qf2 h5 {Qg5 would have given Black better chances to win. After the text move there is nothing better than a draw.} 24.f4 Bh6 25.Be2 Nf6 26.Qxh4 Nxe4 27.Qxd8+ Nxd8 28.Bxa6 d5 29.Be2 Bxf4 30.Bxh5 Bc7 31.Rad1 {Having had twenty-four hours to consider the position, we both came to the conclusion that there was nothing in it but a draw.}" diagram-date="1921.04.16" diagram-result="1/2-1/2""&gt;&lt;/div&gt;</pre>
+
+        <h3>USCF</h3>
+        <div class="board-container" diagram-whitesquare="#9f90b0" diagram-blacksquare="#7d4a8d" diagram-pieces="uscf" diagram-site="Bled YUG" diagram-event="Bled" diagram-round="19" diagram-white="Aron Nimzowitsch" diagram-black="Alexander Alekhine" diagram-pgn="1. e4 {Notes by Raymond Keene.} c6 2. d4 d5 3. exd5 cxd5 4. c4 {Later in life Nimzowitsch took to playing what we now call the Panov-Botvinnik Attack: 3 exd5 cxd5 4 c4. Botvinnik is another player whose openings are influenced by Nimzowitsch, who played this line before anyone had heard of Panov or Botvinnik!} Nf6 5. Nc3 Nc6 6. Nf3 Bg4 7. cxd5 Nxd5 8. Bb5 Qa5 9. Qb3 {!} Bxf3 10. gxf3 Nxc3 11. Bxc6+ {? It was Alekhine, against Winter at London 1932, who improved on this with 11 bxc3 e6 12 d5!} bxc6 12. Qb7 {?} Nd5+ 13. Bd2 Qb6 {!} 14. Qxa8+ Kd7 15. O-O {If 15 a4 Nc7 16 a5 Qxb2 17 Qxa7 Qxa1+} Nc7 16. Ba5 Nxa8 17. Bxb6 Nxb6 18. Rfc1 e6 19. Rc2 Be7 20. Rac1 Bg5 21. Rd1 Rb8 22. Rc5 Nd5 23. Ra5 Rb7 24. Rd3 Bd8 25. Rb3 Rxb3 26. Rxa7+ Nc7 27. axb3 Bf6 28. Rb7 {If 28 Ra4 Nb5!} Bxd4 29. Rb8 Bxb2 30. h3 f5 31. Kf1 Nd5 32. Kg2 Be5 33. Ra8 Nf4+ 34. Kh2 Nd3+ 35. Kg1 Ne1 36. Ra7+ Bc7" diagram-date="1931.09.17" diagram-result="0-1"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-whitesquare="#9f90b0" 
+    diagram-blacksquare="#7d4a8d" 
+    diagram-pieces="uscf" 
+    diagram-site="Bled YUG" 
+    diagram-event="Bled" 
+    diagram-round="19" 
+    diagram-white="Aron Nimzowitsch" 
+    diagram-black="Alexander Alekhine" 
+    diagram-date="1931.09.17" 
+    diagram-result="0-1"
+    diagram-pgn="1. e4 {Notes by Raymond Keene.} c6 2. d4 d5 3. exd5 cxd5 4. c4 {Later in life Nimzowitsch took to playing what we now call the Panov-Botvinnik Attack: 3 exd5 cxd5 4 c4. Botvinnik is another player whose openings are influenced by Nimzowitsch, who played this line before anyone had heard of Panov or Botvinnik!} Nf6 5. Nc3 Nc6 6. Nf3 Bg4 7. cxd5 Nxd5 8. Bb5 Qa5 9. Qb3 {!} Bxf3 10. gxf3 Nxc3 11. Bxc6+ {? It was Alekhine, against Winter at London 1932, who improved on this with 11 bxc3 e6 12 d5!} bxc6 12. Qb7 {?} Nd5+ 13. Bd2 Qb6 {!} 14. Qxa8+ Kd7 15. O-O {If 15 a4 Nc7 16 a5 Qxb2 17 Qxa7 Qxa1+} Nc7 16. Ba5 Nxa8 17. Bxb6 Nxb6 18. Rfc1 e6 19. Rc2 Be7 20. Rac1 Bg5 21. Rd1 Rb8 22. Rc5 Nd5 23. Ra5 Rb7 24. Rd3 Bd8 25. Rb3 Rxb3 26. Rxa7+ Nc7 27. axb3 Bf6 28. Rb7 {If 28 Ra4 Nb5!} Bxd4 29. Rb8 Bxb2 30. h3 f5 31. Kf1 Nd5 32. Kg2 Be5 33. Ra8 Nf4+ 34. Kh2 Nd3+ 35. Kg1 Ne1 36. Ra7+ Bc7"&gt;&lt;/div&gt;</pre>
+
+
+        <h3>Cases</h3>
+        <div class="board-container" diagram-pieces="cases" diagram-whitesquare="#f0d8bf" diagram-blacksquare="#ba5546" diagram-site="Wijk aan Zee NED" diagram-round="18" diagram-event="GMA" diagram-date="2004.01.22" diagram-result="0-1" diagram-white="Akopian,Vl" diagram-black="Svidler,P" diagram-whiteelo="2693" diagram-blackelo="2747" diagram-pgn="1. e4 {Notes by Henderson} e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O 8. a4 b4 9. d3 d6 10. a5 Be6 11. Nbd2 Qc8 12. Bc4 h6 13. h3 Re8 14. b3 Bf8 15. Bb2 Qd7 16. Qe2 Bxc4 17. Nxc4 g6 18. Nh2 Bg7 19. Ng4 Nh7 20. Nge3 f5 21. Nd5 f4 22. d4 Ng5 23. Qg4 Qf7 24. dxe5 dxe5 25. Rad1 Ne6 26. Rd3 Rab8 27. Qd1 Red8 28. f3 Qf8 29. Kh1 Kh7 30. Rd2 Qc5 {The decisive blunder, according to Svidler. Both players were basically making passing moves and Svidler didn't realise that Akopian had 31 Qa1 available. Instead, something like: 30 ..Ncd4 31 Qa1 Rb5 would have kept the balance.} 31. Qa1 Ncd4 32. Bxd4 exd4 {32 ..Nxd4 may have been better.} 33. Qd1 Rf8 34. Qe2 Rbe8 35. Qf1 Rf7 36. Ra1 {With future ideas like Ra4 ganging up on the b-pawn.} d3 {36 ..c6 37 Ndb6 with the idea of Nb2 (attacking a6)-d3 and suddenly black has pawn weaknesses to defend against.} 37. Rxd3 c6 38. Nd6 {Very strong - the knight infiltration decides the game.} 38 ..Bxa1 39 Qxa1 cxd5 40 Rxd5 Qxc2 41 Nxe8 {and the Nf6+ will prove decisive.} cxd5 39. Rxd5 Qc3 40. Rad1 Ree7 41. Nxf7 Rxf7 42. Qxa6 Nd4 43. Qd3 Nxc2 44. Rc1 Rc7 45. Qxc3 Rxc3 46. a6 Ne3 47. Rxc3 bxc3 48. Rc5"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-pieces="cases" 
+    diagram-whitesquare="#f0d8bf" 
+    diagram-blacksquare="#ba5546" 
+    diagram-site="Wijk aan Zee NED" 
+    diagram-round="18" 
+    diagram-event="GMA" 
+    diagram-date="2004.01.22" 
+    diagram-result="1-0" 
+    diagram-white="Akopian,Vl" 
+    diagram-black="Svidler,P" 
+    diagram-whiteelo="2693" 
+    diagram-blackelo="2747"
+    diagram-pgn="1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O 8. a4 b4 9. d3 d6 10. a5 Be6 11. Nbd2 Qc8 12. Bc4 h6 13. h3 Re8 14. b3 Bf8 15. Bb2 Qd7 16. Qe2 Bxc4 17. Nxc4 g6 18. Nh2 Bg7 19. Ng4 Nh7 20. Nge3 f5 21. Nd5 f4 22. d4 Ng5 23. Qg4 Qf7 24. dxe5 dxe5 25. Rad1 Ne6 26. Rd3 Rab8 27. Qd1 Red8 28. f3 Qf8 29. Kh1 Kh7 30. Rd2 Qc5 {The decisive blunder, according to Svidler. Both players were basically making passing moves and Svidler didn't realise that Akopian had 31 Qa1 available. Instead, something like: 30 ..Ncd4 31 Qa1 Rb5 would have kept the balance.} 31. Qa1 Ncd4 32. Bxd4 exd4 {32 ..Nxd4 may have been better.} 33. Qd1 Rf8 34. Qe2 Rbe8 35. Qf1 Rf7 36. Ra1 {With future ideas like Ra4 ganging up on the b-pawn.} d3 {36 ..c6 37 Ndb6 with the idea of Nb2 (attacking a6)-d3 and suddenly black has pawn weaknesses to defend against.} 37. Rxd3 c6 38. Nd6 {Very strong - the knight infiltration decides the game.} 38 ..Bxa1 39 Qxa1 cxd5 40 Rxd5 Qxc2 41 Nxe8 {and the Nf6+ will prove decisive.} cxd5 39. Rxd5 Qc3 40. Rad1 Ree7 41. Nxf7 Rxf7 42. Qxa6 Nd4 43. Qd3 Nxc2 44. Rc1 Rc7 45. Qxc3 Rxc3 46. a6 Ne3 47. Rxc3 bxc3 48. Rc5"&gt;&lt;/div&gt;</pre>
+
+
+
+        <h3>Wood</h3>
+        <div class="board-container" diagram-pieces="wood" diagram-whitesquare="#c9a870" diagram-blacksquare="#8a613c" diagram-site="Wijk aan Zee NED" diagram-round="18" diagram-event="GMA" diagram-date="2004.01.22" diagram-result="0-1" diagram-white="Timman,J" diagram-black="Topalov,V" diagram-whiteelo="2578" diagram-blackelo="2735" diagram-pgn="1. Nf3 c5 2. c4 g6 3. e4 Bg7 4. d4 d6 5. d5 e6 6. Nc3 exd5 7. exd5 Bg4 8. Be2 Ne7 9. O-O O-O 10. Qb3 b6 11. Ng5 Bxe2 12. Nxe2 Nd7 13. Qh3 Nf6 14. Bd2 h6 15. Nf3 g5 16. Ne1 Ne4 17. Bc1 f5 18. Qd3 Qd7 19. Rb1 Rae8 20. b3 Ng6 21. Bb2 Bxb2 22. Rxb2 Qg7 23. Rc2 f4 24. Nc3 Nxc3 25. Qxc3 Qxc3 26. Rxc3 Re2 27. a3 Rfe8 28. Nd3 Rd2 29. Re1 Rxe1+ 30. Nxe1 Ne5 31. h3 Kg7 32. Kf1 Kf6 33. g4 fxg3 34. Rxg3 Kf5 35. Re3 h5 36. a4 Rb2 37. Ng2 h4 38. Rc3 Ke4 39. Re3+ Kf5 40. Rc3 Rb1+ 41. Ke2 Rh1 42. Re3 a5 43. Rc3 Ng6 44. Rf3+ Nf4+ 45. Nxf4 gxf4 46. Rc3 Ke4 47. Kd2 Rb1 48. f3+ Kf5 49. Rc1 Rxb3 50. Re1 Rxf3 51. Re6 Rxh3 52. Rxd6 Re3 53. Rxb6 Re4 54. Kc3 f3 55. Rb8 h3 56. Rf8+ Kg4 57. Kd3 Re1 {0-1}"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-pieces="wood" 
+    diagram-whitesquare="#c9a870" 
+    diagram-blacksquare="#8a613c" 
+    diagram-site="Wijk aan Zee NED" 
+    diagram-round="13" 
+    diagram-event="GMA" 
+    diagram-date="2004.01.25" 
+    diagram-result="0-1" 
+    diagram-white="Timman,J" 
+    diagram-black="Topalov,V" 
+    diagram-whiteelo="2578" 
+    diagram-blackelo="2735"
+    diagram-pgn="1. Nf3 c5 2. c4 g6 3. e4 Bg7 4. d4 d6 5. d5 e6 6. Nc3 exd5 7. exd5 Bg4 8. Be2 Ne7 9. O-O O-O 10. Qb3 b6 11. Ng5 Bxe2 12. Nxe2 Nd7 13. Qh3 Nf6 14. Bd2 h6 15. Nf3 g5 16. Ne1 Ne4 17. Bc1 f5 18. Qd3 Qd7 19. Rb1 Rae8 20. b3 Ng6 21. Bb2 Bxb2 22. Rxb2 Qg7 23. Rc2 f4 24. Nc3 Nxc3 25. Qxc3 Qxc3 26. Rxc3 Re2 27. a3 Rfe8 28. Nd3 Rd2 29. Re1 Rxe1+ 30. Nxe1 Ne5 31. h3 Kg7 32. Kf1 Kf6 33. g4 fxg3 34. Rxg3 Kf5 35. Re3 h5 36. a4 Rb2 37. Ng2 h4 38. Rc3 Ke4 39. Re3+ Kf5 40. Rc3 Rb1+ 41. Ke2 Rh1 42. Re3 a5 43. Rc3 Ng6 44. Rf3+ Nf4+ 45. Nxf4 gxf4 46. Rc3 Ke4 47. Kd2 Rb1 48. f3+ Kf5 49. Rc1 Rxb3 50. Re1 Rxf3 51. Re6 Rxh3 52. Rxd6 Re3 53. Rxb6 Re4 54. Kc3 f3 55. Rb8 h3 56. Rf8+ Kg4 57. Kd3 Re1 {0-1}"&gt;&lt;/div&gt;</pre>
+
+        <h3>Book</h3>
+        <div class="board-container" diagram-pieces="book" diagram-whitesquare="#efefef" diagram-blacksquare="#ababab" diagram-site="London" diagram-round="18" diagram-event="?" diagram-date="1834.??.??" diagram-result="0-1" diagram-white="Alexander McDonnell" diagram-black="Louis Charles Mahe De La Bourdonnais" diagram-pgn="1. e4 {Notes by Morphy} e5 2. f4 exf4 3. Bc4 Qh4+ 4. Kf1 g5 5. Nc3 Bg7 6. d4 Nc6 7. e5 Nge7 8. Nf3 Qh5 9. Ne4 h6 10. Nf6+ Bxf6 11. exf6 d5 12. Bd3 Nf5 13. Qe1+ Kd8 14. Ne5 Nfxd4 {Apprehensive of 15.Be2. The following shows that 14...Ng3+ with a view of winning the exchange, would have lost Black the game - 15.Kg1 Nxh1 16.Nxc6+ Kd7 (best) and White mates in three moves. Black's proper move was 14...Re8, which would have given him an evident advantage.} 15. c3 Nxe5 16. Qxe5 Nc6 17. Qxd5+ Ke8 18. Bb5 Be6 19. Bxc6+ Kf8 20. Qc5+ Kg8 21. Bf3 Qg6 22. Qd4 c5 23. Qe5 {The last two moves with the Queen are not good. He ought to have played 22.Qf2 or 22.b3.} Re8 24. Be2 {This is clearly fatal. Almost all the commentators recommended here 24.Qxc5, but in that case Black might have obtained an almost winning attack by 24...g4, etc. The correct course was to play 24.Kf2, after which, White, with ordinary care ought to have won without much trouble. If Black then check at c2, White would have interposed the Queen. If, again, 24...Bd7 the reply would be 25.Qd6. And, if 24...g4, White would play 25.Be4.} f3 25. Kf2 fxe2 26. Be3 b6 27. h4 {This again, was far from being well played, but did not affect the ultimate result.} Bd7 28. Qd5 Qxf6+ 29. Kxe2 Bg4+ 30. Kd2 Rd8"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-pieces="wood" 
+    diagram-whitesquare="#efefef" 
+    diagram-blacksquare="#ababab" 
+    diagram-site="London" 
+    diagram-round="18" 
+    diagram-event="?" 
+    diagram-date="1834.??.??" 
+    diagram-result="0-1" 
+    diagram-white="Alexander McDonnell" 
+    diagram-black="Louis Charles Mahe De La Bourdonnais" 
+    diagram-pgn="1. e4 {Notes by Morphy} e5 2. f4 exf4 3. Bc4 Qh4+ 4. Kf1 g5 5. Nc3 Bg7 6. d4 Nc6 7. e5 Nge7 8. Nf3 Qh5 9. Ne4 h6 10. Nf6+ Bxf6 11. exf6 d5 12. Bd3 Nf5 13. Qe1+ Kd8 14. Ne5 Nfxd4 {Apprehensive of 15.Be2. The following shows that 14...Ng3+ with a view of winning the exchange, would have lost Black the game - 15.Kg1 Nxh1 16.Nxc6+ Kd7 (best) and White mates in three moves. Black's proper move was 14...Re8, which would have given him an evident advantage.} 15. c3 Nxe5 16. Qxe5 Nc6 17. Qxd5+ Ke8 18. Bb5 Be6 19. Bxc6+ Kf8 20. Qc5+ Kg8 21. Bf3 Qg6 22. Qd4 c5 23. Qe5 {The last two moves with the Queen are not good. He ought to have played 22.Qf2 or 22.b3.} Re8 24. Be2 {This is clearly fatal. Almost all the commentators recommended here 24.Qxc5, but in that case Black might have obtained an almost winning attack by 24...g4, etc. The correct course was to play 24.Kf2, after which, White, with ordinary care ought to have won without much trouble. If Black then check at c2, White would have interposed the Queen. If, again, 24...Bd7 the reply would be 25.Qd6. And, if 24...g4, White would play 25.Be4.} f3 25. Kf2 fxe2 26. Be3 b6 27. h4 {This again, was far from being well played, but did not affect the ultimate result.} Bd7 28. Qd5 Qxf6+ 29. Kxe2 Bg4+ 30. Kd2 Rd8"&gt;&lt;/div&gt;</pre>
+
+
+        <h3>Neo</h3>
+        <div class="board-container" diagram-lang="es" diagram-pieces="neo" diagram-whitesquare="#eeeed2" diagram-blacksquare="#769656" diagram-site="Saint Louis, US" diagram-event="Saint Louis Tournment" diagram-white="M. Carlsen" diagram-black="D. Liren" diagram-pgn="1.e4 {Anotaciones por Pablo Ricardi} e5 2.Cf3 Cc6 3.Ab5 a6 4.Aa4 Cf6 5.O-O Ae7 6.d3 b5 7.Ab3 d6 8.c3 Ca5 9.Ac2 c5 10.d4 cxd4 11.cxd4 O-O 12.h3 {Si las blancas capturan el peón quedan en inferioridad 12.dxe5 dxe5 13.Cxe5 (si 13.Dxd8 Txd8 14.Cxe5 Ab7 con idea de Tac8) Dc7 14.Cf3 Td8 15.De2 Ae6.} Te8 13.d5 Ad7 14.Cc3 Db8 15.Ad3 Tc8 16.Ce2 Cb7 17.g4 {Apresurado. La posición no justifica este avance.} Cc5 18.Cg3 Cxd3 19.Dxd3 b4 20.Te1 Db5 21.Dd1 Tc7 22.Ae3 Tac8 23.Cd2 g6 24.b3 Db7 25.Cc4 Ab5 26.Ca5 Db8 27.Dd2 Tc3 28.a3 bxa3 29.Cc6 Axc6! {Con este sacrificio de calidad, Ding obtiene suficiente contrajuego y una posición fácil de jugar.} 30.Dxc3 Axd5 31.Da5 Axe4 32.g5 Aa8! 33.Dxa6? {A Carlsen no le servían las tablas que podrían acontecer luego de 33.gxf6 Db7 34.Rf1 Dg2+ 35.Re2 Df3+ 36.Rf1.} Cd5 34.Aa7 Dc7 35.Tec1 Dxc1+! 36.Txc1 Txc1+ 37.Rh2 Ac6! 38.Dxa3 { Si 38.h4 f5! 39.Dxa3 Tc2 con ventaja negra.} Axg5 39.Dxd6? {Error decisivo que permite un vistoso desenlace. La computadora encuentra la única defensa que no pierde de inmediato: 39.Ce2! Te1 40.Dxd6 Ce7 41.Dxe5 Cf5 42.f3!, y si Axf3 43.Db8+ Rg7 44.Cg3! con buenas chances de tablas.} Af4! 40.Ac5 Ce7! {0-1}" diagram-date="2019.09.05" diagram-result="0-1"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-lang="es" 
+    diagram-pieces="neo"
+    diagram-whitesquare="#eeeed2" 
+    diagram-blacksquare="#769656"
+    diagram-site="Saint Louis, US" 
+    diagram-event="Saint Louis Tournment" 
+    diagram-white="M. Carlsen" 
+    diagram-black="D. Liren" 
+    diagram-date="2019.09.05" 
+    diagram-result="0-1"
+    diagram-pgn="1.e4 {Anotaciones de Pablo Ricardi} e5 2.Cf3 Cc6 3.Ab5 a6 4.Aa4 Cf6 5.O-O Ae7 6.d3 b5 7.Ab3 d6 8.c3 Ca5 9.Ac2 c5 10.d4 cxd4 11.cxd4 O-O 12.h3 {Si las blancas capturan el peón quedan en inferioridad 12.dxe5 dxe5 13.Cxe5 (si 13.Dxd8 Txd8 14.Cxe5 Ab7 con idea de Tac8) Dc7 14.Cf3 Td8 15.De2 Ae6.} Te8 13.d5 Ad7 14.Cc3 Db8 15.Ad3 Tc8 16.Ce2 Cb7 17.g4 {Apresurado. La posición no justifica este avance.} Cc5 18.Cg3 Cxd3 19.Dxd3 b4 20.Te1 Db5 21.Dd1 Tc7 22.Ae3 Tac8 23.Cd2 g6 24.b3 Db7 25.Cc4 Ab5 26.Ca5 Db8 27.Dd2 Tc3 28.a3 bxa3 29.Cc6 Axc6! {Con este sacrificio de calidad, Ding obtiene suficiente contrajuego y una posición fácil de jugar.} 30.Dxc3 Axd5 31.Da5 Axe4 32.g5 Aa8! 33.Dxa6? {A Carlsen no le servían las tablas que podrían acontecer luego de 33.gxf6 Db7 34.Rf1 Dg2+ 35.Re2 Df3+ 36.Rf1.} Cd5 34.Aa7 Dc7 35.Tec1 Dxc1+! 36.Txc1 Txc1+ 37.Rh2 Ac6! 38.Dxa3 { Si 38.h4 f5! 39.Dxa3 Tc2 con ventaja negra.} Axg5 39.Dxd6? {Error decisivo que permite un vistoso desenlace. La computadora encuentra la única defensa que no pierde de inmediato: 39.Ce2! Te1 40.Dxd6 Ce7 41.Dxe5 Cf5 42.f3!, y si Axf3 43.Db8+ Rg7 44.Cg3! con buenas chances de tablas.} Af4! 40.Ac5 Ce7! {0-1}"&gt;&lt;/div&gt;</pre>
+
+
+        <h3>Chess24</h3>
+        <div class="board-container" diagram-lang="es" diagram-pieces="chess24" diagram-whitesquare="#c2a068" diagram-blacksquare="#6d3a20" diagram-site="Azerbaiyán" diagram-event="Memorial Gashimov en Azerbaiyán" diagram-white="M. Carlsen" diagram-black="Grischuk. A. Shamkir" diagram-pgn="1.e4 {Anotaciones por Pablo Ricardi} e5 2.Cf3 Cc6 3.Ab5 Cf6 4.d3 Ac5 5.c3 O-O 6.O-O d6 7.Aa4 Ce7 8.Ac2 Cg6 9.d4 Ab6 10.a4 c6 11.dxe5 Cxe5 12.Cxe5 dxe5 13.Dxd8 Txd8 {Jugar finales es un recurso hacia el cual Carlsen muestra una tendencia creciente.} 14.a5 Ac5 15.Cd2 Ae6 16.Te1 b5 {Este aparentemente inocuo debilitamiento del flanco dama será causa de futuras dificultades.} 17.Cb3 Axb3 18.Axb3 Cg4 19.Te2 Td6 20.Ag5 {Por si fuera necesario trasladar este alfil a h4.} Rf8 21.Tf1 Cf6 22.g3! {Siguen las pequeñas buenas jugadas. Permite mejorar al rey con Rg2 y prepara un futuro f4.} a6 23.Rg2 Cd7 24.Ac1 Aa7 25.f4 f6 26.h4 Te8 27.h5 h6 28.Aa2 c5 29.Ae3! {Insólito sacrificio de peón como no recuerdo haber visto otro similar.} exf4 30.gxf4! Txe4 31.Ab1 Te7 32.Tfe1 f5? {La idea de Carlsen es que al abrirse la columna rey, se potencia el juego combinado de las torres y los alfiles. También se pone de manifiesto la incómoda ubicación de las piezas negras. La única defensa consistía en reubicar el caballo en c6, desde donde defiende tanto a7 como e7. Una secuencia probable podría ser 32...Cb8 33.Ag6 Cc6 34.Af2 Txe2 35.Txe2 Ce7 36.Rf3 f5 37.Ah4 Cxg6 38.hxg6 Txg6 39.Td2 Te6 40.Td8+ Te8 41.Td6! con ventaja blanca. Devolver el peón, como hace Grischuk, en una posición como ésta, es suicida.} 33.Axf5 Cf6 34.Rf3 Cd5 {Tampoco sirve 34...Td5 35.Ag6 Cxh5 36.Af2 Txe2 37.Txe2 Cf6 38.Te6!} 35.Td2! {Pasando el centro de opresión a la columna dama, lo que resulta decisivo.} Td8 36.Ae4 Ted7 37.Ted1 Cf6 38.Txd7 Cxd7 {Si 38...Txd7 39.Txd7 Cxd7 40.Ab7 Cb8 41.b4 Re7 42.bxc5 Rd8 43.Ad4 con fácil triunfo.} 39.Td6 {Negras abandonan.}" diagram-date="2019.04.11" diagram-result="1-0" diagram-whitesquare="#9f90b0" diagram-blacksquare="#7d4a8d" diagram-pieces="uscf"></div>
+        <pre class="prettyprint">&lt;div class="board-container" 
+    diagram-lang="es"
+    diagram-pieces="chess24" 
+    diagram-whitesquare="#c2a068" 
+    diagram-blacksquare="#6d3a20"
+    diagram-site="Azerbaiyán" 
+    diagram-event="Memorial Gashimov en Azerbaiyán" 
+    diagram-white="M. Carlsen" 
+    diagram-black="Grischuk. A. Shamkir" 
+    diagram-result="1-0" 
+    diagram-date="2019.04.11"
+    diagram-pgn="1.e4 {Anotaciones por Pablo Ricardi} e5 2.Cf3 Cc6 3.Ab5 Cf6 4.d3 Ac5 5.c3 O-O 6.O-O d6 7.Aa4 Ce7 8.Ac2 Cg6 9.d4 Ab6 10.a4 c6 11.dxe5 Cxe5 12.Cxe5 dxe5 13.Dxd8 Txd8 {Jugar finales es un recurso hacia el cual Carlsen muestra una tendencia creciente.} 14.a5 Ac5 15.Cd2 Ae6 16.Te1 b5 {Este aparentemente inocuo debilitamiento del flanco dama será causa de futuras dificultades.} 17.Cb3 Axb3 18.Axb3 Cg4 19.Te2 Td6 20.Ag5 {Por si fuera necesario trasladar este alfil a h4.} Rf8 21.Tf1 Cf6 22.g3! {Siguen las pequeñas buenas jugadas. Permite mejorar al rey con Rg2 y prepara un futuro f4.} a6 23.Rg2 Cd7 24.Ac1 Aa7 25.f4 f6 26.h4 Te8 27.h5 h6 28.Aa2 c5 29.Ae3! {Insólito sacrificio de peón como no recuerdo haber visto otro similar.} exf4 30.gxf4! Txe4 31.Ab1 Te7 32.Tfe1 f5? {La idea de Carlsen es que al abrirse la columna rey, se potencia el juego combinado de las torres y los alfiles. También se pone de manifiesto la incómoda ubicación de las piezas negras. La única defensa consistía en reubicar el caballo en c6, desde donde defiende tanto a7 como e7. Una secuencia probable podría ser 32...Cb8 33.Ag6 Cc6 34.Af2 Txe2 35.Txe2 Ce7 36.Rf3 f5 37.Ah4 Cxg6 38.hxg6 Txg6 39.Td2 Te6 40.Td8+ Te8 41.Td6! con ventaja blanca. Devolver el peón, como hace Grischuk, en una posición como ésta, es suicida.} 33.Axf5 Cf6 34.Rf3 Cd5 {Tampoco sirve 34...Td5 35.Ag6 Cxh5 36.Af2 Txe2 37.Txe2 Cf6 38.Te6!} 35.Td2! {Pasando el centro de opresión a la columna dama, lo que resulta decisivo.} Td8 36.Ae4 Ted7 37.Ted1 Cf6 38.Txd7 Cxd7 {Si 38...Txd7 39.Txd7 Cxd7 40.Ab7 Cb8 41.b4 Re7 42.bxc5 Rd8 43.Ad4 con fácil triunfo.} 39.Td6 {Negras abandonan.}"&gt;&lt;/div&gt;</pre>
+
+    </div>
+</body>
+</html>

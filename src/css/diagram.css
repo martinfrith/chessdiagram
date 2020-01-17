@@ -1,0 +1,173 @@
+.board-container {
+  min-height: 428px;
+  margin: 1.5rem auto;
+}
+
+.spinner-container {
+  position: relative;
+  min-height: 428px;
+  background-image: url('https://chessdiagram.herokuapp.com/img/chesspieces/neo/wN.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  background-color: rgba(0,0,0,0.15);
+}
+
+.spinner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  width:45px; 
+  height:45px;
+  margin: auto;
+  display:block;
+  height: 70%;
+}
+
+.spinner .path {
+  stroke-dasharray: 1,150; /* 1%, 101% circumference */
+  stroke-dashoffset: 0;
+  stroke: rgba(255, 255, 255, 0.7);
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate{
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90,150; /* 70%, 101% circumference */
+    stroke-dashoffset: -35;   /* 25% circumference */
+  }
+  100% {
+    stroke-dasharray: 90,150; /* 70%, 101% circumference */
+    stroke-dashoffset: -124;  /* -99% circumference */
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90,150; /* 70%, 101% circumference */
+    stroke-dashoffset: -35;   /* 25% circumference */
+  }
+  100% {
+    stroke-dasharray: 90,150; /* 70%, 101% circumference */
+    stroke-dashoffset: -124;  /* -99% circumference */
+  }
+}
+
+.columns {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
+}
+
+.columns:last-child {
+  margin-bottom: -0.75rem;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
+}
+
+.diagram .diagram-header {
+  padding: 0.25rem;
+}
+
+.diagram .diagram-pgn {
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.diagram .diagram-pgn .move-index {
+  opacity: 0.5;
+  font-size: 75%;
+}
+
+.diagram .diagram-pgn .move {
+  padding: 1px 3px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color ease 0.5s;
+}
+
+.diagram .diagram-pgn .comment {
+  font-size: 75%;
+  display: contents;
+}
+
+.diagram .diagram-pgn .move:hover {
+  background-color: #fff35f;
+}
+
+.diagram .diagram-pgn .move.active {
+  background-color: #fff35f;
+}
+
+.diagram .diagram-buttons {
+  padding: 0.25rem;
+  padding-bottom: 0.5rem;
+  text-align: right;
+}
+
+.diagram .diagram-buttons .icon {
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.diagram .hide {
+  display: none;
+}
+
+.diagram .show {
+  display: inline;
+}
+
+@media screen and (min-width: 769px), print {
+
+  .diagram .diagram-pgn { 
+    margin-left: -1rem;
+  }
+
+  .column.is-4 {
+    flex: none;
+    width: 35%;
+  }
+
+  .columns:not(.is-desktop) {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .column.is-4 {
+    flex: none;
+    width: 30%;
+  }
+  .columns.is-desktop {
+    display: flex;
+  }
+}

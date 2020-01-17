@@ -1,0 +1,56 @@
+<div class="diagram column">
+	<div class="diagram-header">
+		<span>{{white}}{{#whiteelo}} ({{whiteelo}}){{/whiteelo}}</span> vs 
+		<span>{{black}}{{#blackelo}} ({{blackelo}}){{/blackelo}}</span><br>
+		{{#result}}
+			<small>{{result}}</small>
+		{{/result}}
+		{{#event}}
+			<small>| {{event}}</small>
+		{{/event}}
+		{{#site}}
+			<small>| {{site}}</small>
+		{{/site}}
+		{{#date}}
+			<small>| {{date}}</small>
+		{{/date}}
+		{{#round}}
+			<small>| {{round}}</small>
+		{{/round}}
+		{{#eco}}
+			<small>| {{eco.code}}</small>
+			<small>| {{eco.opening}}</small>
+		{{/eco}}
+	</div>
+	<div class="columns">
+		<div class="column">
+			<div id="b{{id}}" class="is-clickable board"></div>
+		</div>
+		<div class="column">
+			<div class="diagram-pgn">{{{pgn_html}}}</div>
+		</div>
+	</div>
+	<div class="diagram-buttons">
+		<span class="icon flip">
+			<span class="fa fa-retweet"></span>
+		</span>
+		<span class="icon play">
+			<span class="fa fa-play"></span>
+		</span>
+		<span class="icon pause hide">
+			<span class="fa fa-pause"></span>
+		</span>
+		<span class="icon first">
+			<span class="fa fa-step-backward"></span>
+		</span>
+		<span class="icon prev">
+			<span class="fa fa-chevron-left"></span>
+		</span>
+		<span class="icon next">
+			<span class="fa fa-chevron-right"></span>
+		</span>
+		<span class="icon last">
+			<span class="fa fa-step-forward"></span>
+		</span>
+	</div>
+</div>
