@@ -13,6 +13,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
   //res.header("Cache-Control", "public, max-age=2592000")
+  //res.removeHeader('Cache-Control')
   res.header("Expires", new Date(Date.now() + 2592000000).toUTCString())
   next()
 })
