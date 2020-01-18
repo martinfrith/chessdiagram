@@ -1722,12 +1722,9 @@ function init() {
   
 }
 
-
-
 // go time
 init();
 
-cacheImages();
 
 // return the widget object
 return widget;
