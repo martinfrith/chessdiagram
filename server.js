@@ -11,10 +11,8 @@ app.use(bodyParser.json())
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*")
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-
-	if(req.url.indexOf('/img/') === 0 || req.url.indexOf('/dist/') === 0){
-		res.header("Expires", new Date(Date.now() + 2592000000).toUTCString())
-	}
+	res.removeHeader('Cache-Control')
+	res.header("Expires", new Date(Date.now() + 2592000000).toUTCString())
 	next()
 })
 
